@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>React</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section><img src="assets/react-one.jpg" alt=""></section>
+				<section>
+					<section><img src="assets/walke.png" alt=""></section>
+					<section><img src="assets/xhp.png" style="background: lightblue;" alt=""></section>
+					<section><img src="assets/news.jpg" alt=""></section>
+				</section>
+				<section>
+					<section>What is React?</section>
+					<section data-markdown>
+						<script type="text/template">
+							#### React - JavaScript library for building user interfaces or UI components.
+							- https://github.com/facebook/react
+						</script>
+					</section>
+					<section><img src="assets/SPA-1.png" alt=""></section>
+				</section>
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							### Virtual DOM
+							- representation of a UI is kept in memory and synced with the “real” DOM by a library such as ReactDOM. <!-- .element: class="fragment" data-fragment-index="1" -->
+						</script>
+					</section>
+					<section><img src="assets/virtual.png" alt=""></section>
+				</section>
+				<section>
+					<section><img src="assets/comp.png" alt=""></section>
+					<section data-markdown>
+						<script type="text/template">
+							#### Components and Data Flow
+							- Props - values that are being passed into a component from the outside.
+							- State - optional and bound to a single instance of a component. The component can pass state down to other components via props.
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							### Function
+							```
+							function Welcome(props) {
+								return <h1>Hello, {props.name}</h1>;
+							}
+							```
+							### ES6 Class
+							```
+							class Welcome extends React.Component {
+								render() {
+								  return <h1>Hello, {this.props.name}</h1>;
+								}
+							}	
+							```
+						</script>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							#### React projects often leverage a syntax called JSX
+							```
+							ReactDOM.render(
+							<h1>Привет, мир!</h1>,
+							document.getElementById('root')
+							);
+							```
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							##### JSX braces
+							```
+							const name = "Sasha"
+							const myElement = <h1>Hello, {name}</h1>;
+							```
+							##### Multiple lines
+							```
+							const myElement = (
+							<ul>
+								<li>Apples</li>
+								<li>Bananas</li>
+								<li>Cherries</li>
+							</ul>
+							);
+							```
+							##### Self-closing tags must and in a slash
+							``` 
+							const myElement = <input type="text" />; 
+							```
+						</script>
+					</section>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						### Why you should use React ?
+						- Works great for teams, strongly enforcing UI and workflow patterns. <!-- .element: class="fragment" data-fragment-index="1" -->
+						- UI code is readable and maintainable. <!-- .element: class="fragment" data-fragment-index="2" -->
+						- Componentized UI is the future of web development, and you need to start doing it now. <!-- .element: class="fragment" data-fragment-index="3" -->
+					</script>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
